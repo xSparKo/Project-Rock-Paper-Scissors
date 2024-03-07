@@ -35,15 +35,27 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+// Wait for the DOM content to be fully loaded before executing the code
 document.addEventListener('DOMContentLoaded', function () {
+
+    // Select all button elements on the page
     const buttons = document.querySelectorAll('button');
+    // Create a new div element to display the game results
     const resultsDiv = document.createElement('div');
+    // Create a new div element to display the current score
     const scoreDiv = document.createElement('div');
+    
+    // Initialize player's score to 0
     let playerScore = 0;
+    // Initialize computer's score to 0
     let computerScore = 0;
 
+
+    // Append the resultsDiv to the body of the document
     document.body.appendChild(resultsDiv);
+    // Append the scoreDiv to the body of the document
     document.body.appendChild(scoreDiv);
+  
 
     buttons.forEach(button => {
         button.addEventListener('click', () => {
